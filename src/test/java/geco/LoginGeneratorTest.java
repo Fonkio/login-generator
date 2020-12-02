@@ -51,4 +51,11 @@ public class LoginGeneratorTest {
     public void generateLoginForNomAndPrenomCT4() {
         assertEquals("PDUR", this.loginGenerator.generateLoginForNomAndPrenom("Dùrand", "Paul"));
     }
+
+    //CT5 : Quand on génère le login de "Paul Du", on vérifie que le login généré et ajouté à
+    //la liste des logins existants est "PDU".
+    @Test
+    public void generateLoginForNomAndPrenomCT5() {
+        assertEquals("PDU", this.loginGenerator.generateLoginForNomAndPrenom("Du", "Paul"));
+    }
 }
